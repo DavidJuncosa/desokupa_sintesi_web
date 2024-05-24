@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desokupa Express</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="shortcut icon" href="/desokupa/img/iconoO.png" />
+  <style>
+    .hero-body {
+      background-color: #000000;
+    }
+
+    .is-primary {
+      color: #ffffff;
+    }
+
+    .navbar-items:hover {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .navbar-items {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 10px 15px;
+      margin: 0 5px;
+      border-radius: 5px;
+    }
+
+    .footer {
+      background-color: #000;
+      color: #fff;
+    }
+
+    .logo-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .navbar.is-primary {
+      background-color: #000;
+    }
+
+    .resumen {
+      height: auto;
+      width: 700px;
+    }
+
+    #contacte {
+      height: auto;
+      width: 30%;
+      margin-left: 35%;
+    }
+
+    .logo {
+      height: auto;
+      width: 1000%;
+    }
+
+    #scrollToTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 40px;
+      z-index: 100;
+      background-color: #000;
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      padding: 10px;
+      cursor: pointer;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+      border: 2px solid transparent;
+    }
+
+    #scrollToTopBtn.show {
+      opacity: 1;
+    }
+
+    #scrollToTopBtn.white {
+      background-color: #fff;
+      color: #000;
+    }
+
+    #scrollToTopBtn i {
+      font-size: 20px;
+    }
+
+    #scrollToTopBtn:hover {
+      background-color: #fff;
+      color: #000;
+      border-color: #000;
+    }
+
+    .productos {
+      text-align: center;
+      font-size: 26px;
+      font-weight: bolder;
+    }
+
+    .text{
+      text-align: center;
+    }
+
+    .mediumtext {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .smalltext{
+      text-align: center;
+    }
+
+    .imgproduct{
+      text-align: center;
+      margin-left: 9%;
+      width: 479px;
+      height: 311px;
+    }
+
+    p{
+      text-align: justify;
+    }
+
+    .centrador {
+      margin-left: 24%;
+      width: 700px;
+      height: 150px;
+    }
+
+    .carousel {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .carousel-inner {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .carousel-item {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .carousel-controls {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+    }
+
+    .carousel-controls button {
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      padding: 0.5rem;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav id="portada" class="navbar is-primary" role="navigation" aria-label="main navigation">
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <a href="#inici" class="navbar-items">Inicio</a>
+        <a href="#sobre-nosaltres" class="navbar-items">Sobre Nosotros</a>
+        <a href="#serveis" class="navbar-items">Servicios</a>
+        <a href="#contacte" class="navbar-items">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <div class="logo-container">
+            <img class="logo" src="/desokupa/img/logodefi.png" alt="Logo de Desokupa Express" width="400">
+        </div>
+        <br>
+        <br>
+        <br>
+        <div  class="resumen">
+        <p id="inici">
+          <strong>Bienvenido</strong> a Desokupa Express, tu aliado confiable en situaciones de desalojo. 
+          En un mundo donde los conflictos de ocupación son más comunes y la desocupación puede volverse compleja y estresante, 
+          nosotros ofrecemos una solución integral y efectiva para proteger tus derechos y propiedad.
+          Porque no hay nada más sagrado que la vida, y nuestra vida es nuestra casa.
+        </p>
+        <br>
+        <p>
+          Nuestro equipo cuenta con años de experiencia y está formado por expertos en 
+          derecho, seguridad y negociación, capacitados para manejar todo tipo de situaciones de desalojo, 
+          desde ocupaciones ilegales hasta disputas legales complejas. Ofrecemos soluciones rápidas y efectivas 
+          para resolver conflictos de desalojo, restaurando la tranquilidad en tu propiedad lo antes posible. 
+          Operamos estrictamente dentro del marco legal, asegurando que tus derechos como propietario sean siempre protegidos. 
+          Además, ofrecemos soluciones personalizadas adaptadas a cada situación específica y brindamos un servicio de atención
+          al cliente dedicado y constante.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre-nosaltres" class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <div class="content">
+            <h3>Sobre Nosotros</h3>
+            <p>Desokupa Express es una empresa líder en el campo de la desokupación, 
+              dedicada a ofrecer soluciones rápidas y efectivas para resolver conflictos de desalojo en toda la región. 
+              Desde su fundación, nos hemos destacado por nuestro compromiso con la excelencia, 
+              la ética y el servicio al cliente.</p>
+            <p>
+              Fundada en 2023 por un equipo de expertos en derecho y seguridad, 
+              Desokupa Express surgió de la necesidad de brindar una respuesta rápida y profesional a los problemas de ocupación
+              ilegal que surgen en la región. Desde entonces, hemos crecido y diversificado nuestros servicios para convertirnos en un referente en el sector, 
+              ganando la confianza de propietarios e inquilinos por igual.</p>
+            <p>
+              Nuestra misión es proporcionar a nuestros clientes una solución rápida, 
+              legal y sin complicaciones para resolver conflictos de desalojo y una seguridad real en los hogares. 
+              Nos esforzamos por ofrecer un servicio de alta calidad que garantice la protección de los derechos y 
+              la propiedad de nuestros clientes, al tiempo que promovemos la tranquilidad y la seguridad en sus vidas.</p>
+            <br>
+
+            <div class="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item">
+                  <img src="/desokupa/img/fotocasa.jpg" alt="Fotocasa">
+                </div>
+                <div class="carousel-item">
+                  <img src="/desokupa/img/fotocamara.jpg" alt="Fotocamara">
+                </div>
+                <div class="carousel-item">
+                  <img src="/desokupa/img/alarma.jpg" alt="Fotocamara">
+                </div>
+                <div class="carousel-item">
+                  <img src="/desokupa/img/hogarseguro.jpg" alt="Fotocamara">
+                </div>
+              </div>
+              <div class="carousel-controls">
+                <button id="prevBtn">&#10094;</button>
+                <button id="nextBtn">&#10095;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="serveis" class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <div class="content">
+            <h3>Servicios</h3>
+              <p>Ofrecemos una variedad de servicios diseñados a medida para abordar todas tus necesidades de desalojo 
+                y seguridad de manera efectiva y profesional.</p>
+              <br>
+                <h6>Desocupación (a partir de 2000€):</h6>
+                  <p>Ofrecemos un servicio completo de desocupación, adaptado a las circunstancias específicas de cada caso. 
+                    Nuestro equipo de expertos se encarga de todo el proceso, desde la planificación hasta la ejecución, 
+                    garantizando una resolución rápida y eficiente. Este servicio personalizado asegura que cada desalojo 
+                    se maneje de acuerdo con las necesidades y requisitos del cliente.</p>
+              <br>
+                <h6>Restauración de Propiedades (a partir de 500€):</h6>
+                  <p>Después de un desalojo, también ofrecemos servicios de restauración de propiedades para devolver tu inmueble a su estado original o mejorado. 
+                  Nos encargamos de todas las reparaciones y limpieza necesaria para que puedas volver a disfrutar de tu propiedad sin preocupaciones.</p>
+              <br>
+                <h6>Mediación con Inquilinos (a partir de 300€):</h6>
+                  <p>Entendemos que no todos los conflictos requieren un desalojo inmediato. 
+                    Por eso, ofrecemos servicios de mediación para resolver disputas con inquilinos de manera pacífica y justa.
+                    Nuestros mediadores y abogados experimentados trabajan para alcanzar acuerdos beneficiosos para ambas partes, 
+                    evitando procesos legales costosos y prolongados.</p>
+              <br>
+                <h6>Vigilancia y Seguridad (a partir de 45€ mensuales):</h6>
+                  <p>Para proteger tu propiedad contra futuras ocupaciones ilegales o intrusiones, 
+                    ofrecemos la instalación de sistemas de seguridad avanzados con alarmas. 
+                    Permitiendo el aviso inmediato a la policia y su desalojo inmediato, asegurando que tu propiedad esté siempre 
+                    vigilada y segura, proporcionando tranquilidad constante.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="centrador">
+  <p class="text">Para llevar la seguridad de tu hogar al siguiente nivel, ofrecemos una selección exclusiva de 
+    sistemas de seguridad avanzados. Estas mejoras premium se pueden añadir a tu sistema actual por un módico precio 
+    adicional a la cuota mensual, proporcionando una protección integral y personalizada que se adapta a tus 
+    necesidades específicas. Con estas opciones, garantizamos que tu hogar esté equipado con la tecnología más 
+    avanzada para brindarte la máxima tranquilidad y seguridad.</p>
+  </div>
+  <br>
+  <br>
+  <br>
+  <section>
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="columns is-half">
+          <div class="column">
+            <img class="imgproduct" src="/desokupa/img/cajafuerte.jpg">
+              <h2 class="productos">CAJAS FUERTES</h2>
+              <br>
+              <p class="mediumtext">Camufladas, personalizadas y a medida</p>
+              <p class="smalltext">Ten tus bienes más preciados bajo control, nosotros te asesoramos para escoger la que más se adapte a tus necesidades.</p>
+          </div>
+          <div class="column">
+            <img class="imgproduct" src="/desokupa/img/puertablindada.jpg">
+              <h2 class="productos">PUERTAS BLINDADAS</h2>
+              <br>
+              <p class="mediumtext">Última tecnología en puertas acorazadas</p>
+              <p class="smalltext">Perfectas para comunidades de vecinos, casas particular o negocios. Nos encargamos de su instalación, adaptación y mantenimiento.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+  <br>
+  <section>
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="columns is-half">
+          <div class="column">
+            <img class="imgproduct" src="/desokupa/img/sistemas-niebla.jpg">
+              <h2 class="productos">SISTEMA DE NIEBLA</h2>
+              <br>
+              <p class="mediumtext">Sistema antirrobo más eficaz del mercado</p>
+              <p class="smalltext">Funciona impidiendo la visibilidad a los intrusos a través de niebla artificial disparada por medio de cañones y paralizando así el robo.</p>
+          </div>
+          <div class="column">
+            <img class="imgproduct" src="/desokupa/img/control-de-acceso.jpg">
+              <h2 class="productos">CONTROL DE ACCESOS</h2>
+              <br>
+              <p class="mediumtext">Controla qué vehículos y personas acceden a tu inmueble</p>
+              <p class="smalltext">Nuestro sistema avanzado de identificación y software especializado registra cada entrada y salida, brindándote una visión completa de la actividad en tu negocio.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="serveis" class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <div class="content">
+            <br>
+              <p class="text">Cada uno de estos servicios está diseñado para ofrecer soluciones efectivas y personalizadas, 
+                asegurando que puedas manejar cualquier situación de desalojo o necesidad de seguridad con 
+                confianza y tranquilidad.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacte" class="section">
+    <div class="container">
+      <h3 class="title">Contacto</h3>
+      <div class="columns">
+        <div class="column">
+          <form id="contact-form">
+            <div class="field">
+              <label class="label">Nombre</label>
+              <div class="control">
+                <input id="name" class="input" type="text" placeholder="Tu Nombre">
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Correo electrónico</label>
+              <div class="control">
+                <input id="email" class="input" type="email" placeholder="ejemplo@ejemplo.com">
+              </div>
+            </div>
+            <div class="field">
+              <label class="label">Mensaje</label>
+              <div class="control">
+                <textarea id="message" class="textarea" placeholder="Mensaje"></textarea>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <button type="submit" class="button is-primary">Enviar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <p class="text">
+        Desokupa Express por David Juncosa & Darío Delpeix
+      </p>
+      <p class="text">© 2024 Todos los derechos reservados</p>
+      <p class="text">
+        <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+      </p>
+    </div>
+  </footer>
+
+  <button id="scrollToTopBtn" class="button is-primary">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const links = document.querySelectorAll('a[href^="#"]');
+      for (const link of links) {
+        link.addEventListener('click', clickHandler);
+      }
+
+      function clickHandler(e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        const offsetTop = document.querySelector(href).offsetTop;
+
+        scroll({
+          top: offsetTop,
+          behavior: 'smooth'
+        });
+      }
+
+      const form = document.getElementById('contact-form');
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        if (!name || !email || !message) {
+          alert('Hace falta rellenar todos los campos del formulario');
+          return;
+        }
+
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+          alert('El correo electrónico no tiene un formado valido');
+          return;
+        }
+        alert('Formulario enviado con exito!');
+        form.reset();
+      });
+
+      const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 380) {
+          scrollToTopBtn.classList.add('show');
+        } else {
+          scrollToTopBtn.classList.remove('show');
+        }
+
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 195) {
+          scrollToTopBtn.classList.add('white');
+        } else {
+          scrollToTopBtn.classList.remove('white');
+        }
+      });
+
+      scrollToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+    });
+
+
+    const carouselInner = document.querySelector('.carousel-inner');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      const totalSlides = document.querySelectorAll('.carousel-item').length;
+      if (index >= totalSlides) {
+        currentIndex = 0;
+      } else if (index < 0) {
+        currentIndex = totalSlides - 1;
+      } else {
+        currentIndex = index;
+      }
+      carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      showSlide(currentIndex - 1);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      showSlide(currentIndex + 1);
+    });
+
+    setInterval(() => {
+      showSlide(currentIndex + 1);
+    }, 5000);
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
